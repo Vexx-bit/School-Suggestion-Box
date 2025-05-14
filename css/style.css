@@ -1,0 +1,387 @@
+/* Reset and Global Styling */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Color Scheme */
+    --color-primary: #213373; /* Dark Blue */
+    --color-secondary: #1B85FB; /* Bright Blue */
+    --color-white: #fff;
+    --color-light: #D3D3D3; /* Light gray */
+    --color-black: #000000;
+    --color-tab: #ED1E24; /* Red for active elements */
+    --color-accent: #FFC107; /* Accent color */
+    --color-background: #F4F4F9; /* Off-white background */
+
+    /* Shadow and Transition */
+    --box-shadow-btn: 0 1rem 2rem rgba(0, 0, 0, 0.175);
+    --box-shadow-light: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --transition: all 400ms ease;
+
+    /* Font Sizes */
+    --small-font: 0.5rem;
+    --medium-font: 1rem;
+    --large-font: 2rem;
+
+    /* Font Family */
+    --font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-background);
+    color: var(--color-black);
+    line-height: 1.6;
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    font-size: 1rem;
+    color: var(--color-light);
+}
+
+/* Navigation */
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nav a {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.nav a:hover {
+    color: var(--color-secondary);
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--color-primary-rgba);
+    padding: 3rem;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: var(--large-font);
+    color: var(--color-primary);
+}
+
+.hero-content p {
+    font-size: var(--medium-font);
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-btn);
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-accent);
+}
+
+/* Suggestion Form Section */
+.suggestion-form-section {
+    padding: 2rem;
+    background-color: var(--color-white);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.suggestion-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.suggestion-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--color-black);
+}
+
+.suggestion-form input,
+.suggestion-form select,
+.suggestion-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--color-light);
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-submit:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Footer Section */
+.footer {
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.footer-links a {
+    color: var(--color-secondary);
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--color-accent);
+}
+
+/* FAQ Section Styling */
+/* FAQ Section Styling */
+.faq-section {
+    padding: 2rem;
+    background-color: var(--color-white);
+}
+
+.faq h2 {
+    font-size: 1.75rem;
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+}
+
+.faq-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-light);
+    transition: var(--transition);
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: var(--color-secondary);
+}
+
+.faq-answer {
+    font-size: 1rem;
+    color: var(--color-black);
+    padding-top: 0.5rem;
+    display: none;
+}
+
+/* Contact Section Styling */
+.contact-section {
+    padding: 2rem;
+    background-color: var(--color-white);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info, .contact-form {
+    margin-bottom: 2rem;
+}
+
+.contact-info h2, .contact-form h2 {
+    font-size: 1.75rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.contact-info p, .contact-details p {
+    font-size: 1rem;
+    color: var(--color-black);
+    line-height: 1.6;
+}
+
+.contact-details p {
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Form Styling */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.contact-form input, .contact-form textarea {
+    font-size: 1rem;
+    padding: 0.75rem;
+    border: 1px solid var(--color-light);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: var(--color-secondary);
+    outline: none;
+    box-shadow: 0 0 5px rgba(33, 51, 115, 0.25);
+}
+
+.contact-form button {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--box-shadow-btn);
+}
+
+.contact-form button:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Feedbacks Page Specific Styles */s
+.feedbacks-section {
+    padding: 2rem;
+    background-color: var(--color-white);
+    max-width: 900px;
+    margin: 2rem auto;
+}
+
+.feedbacks-section h2 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.feedbacks-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.feedback-card {
+    background-color: var(--color-background);
+    padding: 1.5rem;
+    border: 1px solid var(--color-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feedback-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.feedback-category,
+.feedback-desc,
+.feedback-reply {
+    font-size: 1rem;
+    color: var(--color-black);
+    margin-bottom: 1rem;
+}
+
+.no-feedback {
+    font-size: 1rem;
+    color: var(--color-black);
+    text-align: center;
+}
+/* Custom Style for "Mark as Resolved" button */
+#mark_resolved {
+    background-color: var(--color-tab); /* Red for active elements */
+    color: var(--color-white);
+    border: 2px solid var(--color-tab);
+    padding: 12px 24px;
+    font-size: var(--medium-font);
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    box-shadow: var(--box-shadow-btn);
+    transition: var(--transition);
+    display: inline-block;
+}
+
+/* Hover state */
+#mark_resolved:hover {
+    background-color: var(--color-accent); /* Accent color on hover */
+    border-color: var(--color-accent);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2); /* Slightly more intense shadow */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Active state (button pressed) */
+#mark_resolved:active {
+    background-color: var(--color-primary); /* Dark Blue when clicked */
+    border-color: var(--color-primary);
+    box-shadow: none; /* Remove shadow on click */
+    transform: translateY(1px); /* Slightly pressed effect */
+}
+
+/* Focus state for accessibility */
+#mark_resolved:focus {
+    outline: 3px solid var(--color-accent); /* Golden outline when focused */
+    outline-offset: 2px;
+}

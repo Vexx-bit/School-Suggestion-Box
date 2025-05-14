@@ -1,0 +1,102 @@
+:root {
+    /* Color Scheme */
+    --color-primary: #213373; /* Dark Blue */
+    --color-secondary: #1B85FB; /* Bright Blue */
+    --color-white: #fff;
+    --color-light: #D3D3D3; /* Light gray */
+    --color-black: #000000;
+    --color-tab: #ED1E24; /* Red for active elements */
+    --color-accent: #FFC107; /* Accent color */
+    --color-background: #F4F4F9; /* Off-white background */
+
+    /* Shadow and Transition */
+    --box-shadow-btn: 0 1rem 2rem rgba(0, 0, 0, 0.175);
+    --box-shadow-light: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --transition: all 400ms ease;
+
+    /* Font Sizes */
+    --small-font: 0.5rem;
+    --medium-font: 1rem;
+    --large-font: 2rem;
+
+    /* Font Family */
+    --font-family: 'Arial', sans-serif;
+}
+
+/* Global Styles */
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Login Section */
+.login-section {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    font-size: var(--large-font);
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--color-light);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: var(--color-secondary);
+    outline: none;
+}
+
+/* Login Button */
+.btn-login {
+    padding: 0.5rem 1.5rem;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: var(--medium-font);
+    margin-top: 1rem;
+}
+
+.btn-login:hover {
+    background-color: #155bb5;
+}
+
+/* Footer */
+.login-footer {
+    margin-top: 1.5rem;
+    font-size: var(--small-font);
+    color: var(--color-dark);
+}

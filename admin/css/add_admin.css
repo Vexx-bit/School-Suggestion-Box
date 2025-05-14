@@ -1,0 +1,147 @@
+:root {
+    --color-primary: #213373;
+    --color-secondary: #1B85FB;
+    --color-light: #D3D3D3;
+    --color-white: #fff;
+    --color-dark: #333;
+    --box-shadow-btn: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    --transition: all 400ms ease;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: var(--color-light);
+}
+
+.admin-header {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.admin-nav {
+    background-color: var(--color-secondary);
+    position: relative;
+    padding: 1rem;
+}
+
+.admin-nav #nav-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.admin-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.admin-nav ul li a {
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+/* Main Content */
+.admin-main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.add-admin-section {
+    margin-top: 1rem;
+    background-color: var(--color-white);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow-btn);
+    padding: 1.5rem;
+}
+
+.add-admin-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1.5rem; /* Increased for better spacing */
+}
+
+.add-admin-section h1 {
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+.add-admin-section label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 97%;
+    padding: 0.5rem;
+    border: 1px solid var(--color-light);
+    border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: var(--color-secondary);
+    outline: none;
+}
+
+input[disabled] {
+    background-color: #f0f0f0; /* Light gray background */
+    color: var(--color-dark); /* Dark text */
+}
+
+.btn-add-admin {
+    padding: 0.5rem 1rem;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+    align-self: flex-start; /* Align the button to the start of the form */
+}
+
+.btn-add-admin:hover {
+    background-color: #155bb5;
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .admin-nav ul {
+        display: none;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    .admin-nav #nav-toggle {
+        display: block;
+    }
+
+    .admin-nav .show {
+        display: flex;
+    }
+
+    .admin-main {
+        padding: 0.5rem;
+    }
+
+    .add-admin-section {
+        padding: 1rem;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 97%; /* Ensure inputs are full width on smaller screens */
+    }
+}
